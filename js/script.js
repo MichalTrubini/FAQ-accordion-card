@@ -1,33 +1,22 @@
-/* let cardQuestion = $('.item__wrapper');
-let cardAnswer = $('.answer__body');
-
-cardAnswer.hide();
-
-cardQuestion.on('click', function(event){
-    event.preventDefault();
-
-    cardAnswer.hide();
-    cardQuestion.css('font-weight', 400)
-    $(this).css('font-weight', 700).next().toggle();
-})
-
-console.log(cardQuestion); */
-
-let questionBlock = document.querySelectorAll('.card__item');
-
-questionBlock.forEach(toggleAnswer);
+(function () {
+    let questionBlock = document.querySelectorAll('.card__item');
+    questionBlock.forEach(toggleAnswer);
+})();
 
 function toggleAnswer(item) {
 
     item.addEventListener('click', function(){
         let answerThis = item.querySelector('.answer__body');
         let questionThis = item.querySelector('.question__body');
+        let arrowThis = item.querySelector('.question__arrow');
 
         let answerAny = document.querySelector('.answer-visible');
         let questionAny = document.querySelector('.question-selected');
+        let arrowAny = document.querySelector('.arrow-up');
 
         if (answerAny) answerAny.classList.remove('answer-visible');
         if (questionAny) questionAny.classList.remove('question-selected');
+        if (arrowAny) arrowAny.classList.remove('arrow-up');
 
         if (answerThis.classList.contains('answer-visible')) {
             answerThis.classList.remove('answer-visible');
@@ -36,6 +25,7 @@ function toggleAnswer(item) {
         else {
             answerThis.classList.add('answer-visible')
             questionThis.classList.add('question-selected');
+            arrowThis.classList.add('arrow-up');
         };
     })
 };

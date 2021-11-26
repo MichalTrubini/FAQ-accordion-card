@@ -85,6 +85,16 @@ body {
     color:#1E1F36;
 }
 
+.arrow-up {
+    transition: transform 0.5s;
+    transform: rotate(-180deg);
+}
+
+.arrow-down {
+    transition: transform 0.5s;
+    transform: rotate(-180deg);
+}
+
 @media (min-width:1000px) {
 
     .main {
