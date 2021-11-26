@@ -118,6 +118,11 @@ body {
   font-size: 1.3rem;
 }
 
+.question__body:hover {
+  cursor: pointer;
+  color: #F47B56;
+}
+
 .answer__body {
   padding-top: 0;
   line-height: 1.8rem;
@@ -180,10 +185,12 @@ body {
             flex-direction: row;
     max-width: 92rem;
     width: 92rem;
-    padding: 6.5rem 9.5rem 8.3rem 47.5rem;
+    padding: 0 9.5rem 0 47.5rem;
   }
   .card__content {
     width: 35rem;
+    height: 50.9rem;
+    padding-top: 6.5rem;
   }
   .card__heading {
     text-align: left;
