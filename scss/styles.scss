@@ -3,13 +3,13 @@
 body {
     background:linear-gradient($Soft-violet,$Soft-blue) no-repeat;
     font-family:'Kumbh Sans', sans-serif;
+    color:$color-text-main;
     font-size: 1.2rem;
-    height:100vh;
 }
 
 .main {
-    margin: 16rem auto 1rem auto;
-    width:34rem;
+    padding:14.8rem 2.4rem 8.5rem;
+    width:100%;
 }
 
 .card {
@@ -17,16 +17,30 @@ body {
     @include flexCenter(column);
 
     background:$background-article-card;
-    border-radius: 2rem;
-    height:55rem;
-    padding:2rem ;
-    padding-top:0;
-    width:90vw;
-    max-width:34rem;
+    border-radius: 2.3rem;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+    padding:13.2rem 2.4rem 4.8rem;
+    max-width:32.7rem;
+    position:relative;
 
+    &__image {
+        position: relative;
+        top:-109px;
+        left:-3px;
+    }
+
+    &__image-wrapper {
+        background:url(../images/bg-pattern-mobile.svg) no-repeat;
+        background-position-x: 20px;
+        position:absolute;
+        top:0;
+        left: 25px;
+    }
+    
     &__heading {
-        margin-bottom:2rem;
-        font-size: 3rem;
+        margin-bottom:3.8rem;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
         font-weight: 700;
         text-align: center;
     }
@@ -34,46 +48,42 @@ body {
     &__item {
         border-bottom:1px solid $border-color;
     }
-}
 
-.image {
-
-    position:relative;
-    height:13rem;
-    width:100%;
-
-    &__main {
-        position:absolute;
-        top:-85%;
-        left:1%;
-        z-index:1;
+    &__content {
+        width: 100%;
     }
 
-    &__background {
-        left:11%;
-        position: absolute;
-        z-index: 2;
+    &__q-img {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-}
-
-.item__wrapper {
-    @include flexCenter(row);
-
-    justify-content: space-between;
 }
 
 .answer__body, .question__body {
-    color:$color-text-main;
-    font-size: 1.4rem;
-    padding:1.5rem 1rem;
+    padding:2rem 0rem 1.9rem;
+}
+
+.question__body {
+    font-size: 1.3rem;
 }
 
 .answer__body {
     padding-top:0;
+    line-height: 1.8rem;
+    width: 90%;
+    display:none;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.answer-visible {
+    display:block;
+}
+
+.question-selected {
+    font-weight:700;
+    color:#1E1F36;
+}
 
 @media (min-width:1000px) {
 
