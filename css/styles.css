@@ -73,6 +73,7 @@ body {
 }
 
 .card__heading {
+  color: #1E1F36;
   margin-bottom: 3.8rem;
   font-size: 3.2rem;
   line-height: 3.2rem;
