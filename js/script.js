@@ -20,7 +20,7 @@ function toggleAnswer(item) {
             prevQuestionVisible.classList.remove('question-selected');
             prevArrow.classList.remove('arrow-up');
         }
-    
+        
         currentAnswer.classList.toggle('answer-visible');
         currentQuestion.classList.toggle('question-selected');
         currentArrow.classList.toggle('arrow-up');
